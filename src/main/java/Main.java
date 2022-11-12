@@ -1,6 +1,6 @@
-import abstractFactory.AbstractFactory;
+import abstractFactory.FactoryDemo;
 import builder.Builder;
-import factoryMethod.FactoryMethod;
+import factoryMethod.MethodDemo;
 import lazyInitialization.Fruit;
 import lazyInitialization.FruitType;
 import prototype.Prototype;
@@ -10,14 +10,14 @@ public class Main {
 
     public static void main(String[] args) {
         System.out.println("----------------------Abstract Factory------------------");
-        AbstractFactory abstractFactory = new AbstractFactory();
-        abstractFactory.startAbstractFactoryDemo();
+        FactoryDemo abstractFactory = new FactoryDemo();
+        abstractFactory.demo();
         System.out.println("--------------------------Builder--------------------------");
         Builder builder = new Builder();
         builder.startDecoratorDemo();
         System.out.println("------------------------Factory Method---------------------------");
-        FactoryMethod factoryMethod = new FactoryMethod();
-        factoryMethod.factoryMethodRun();
+        MethodDemo factoryMethod = new MethodDemo();
+        factoryMethod.demo();
         System.out.println("------------------------Lazy initialization---------------------------");
         Fruit fruit = new Fruit();
         fruit.getFruitByTypeName(FruitType.banana);
